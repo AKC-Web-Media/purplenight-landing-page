@@ -10,7 +10,7 @@ function HeroSection() {
             <p className="text-sm text-gray-700 mb-4">
               Our most intelligent reasoning model. We're also launching Claude Code, an agentic CLI tool for coding.
             </p>
-            <button className="bg-black text-white rounded-full px-4 py-2 text-sm">
+            <button className="bg-white text-black rounded-full px-4 py-2 text-sm">
               Read the announcement
             </button>
           </div>
