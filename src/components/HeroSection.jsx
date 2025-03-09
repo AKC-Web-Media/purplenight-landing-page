@@ -21,7 +21,7 @@ function HeroSection() {
           </div>
           <div className="bg-stone-200 p-4 rounded-lg">
             <p className="text-sm font-medium mb-1">Preview mode</p>
-            <p className="text-lg font-bold mb-1">Claude's reasoning</p>
+            <p className="text-lg font-bold mb-1">Claude's extended thinking</p>
             <p className="text-sm">Enabled</p>
           </div>
         </div>
