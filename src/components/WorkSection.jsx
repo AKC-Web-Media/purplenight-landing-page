@@ -1,22 +1,26 @@
-import React from 'react';
+import React from "react";
 
 function WorkSection() {
   return (
-    <div className="py-12 px-6 bg-white">
+    <div id="work" className="py-12 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-xl font-bold mb-8">Our Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <p className="text-sm text-gray-500 mb-2">Enterprise</p>
-            <h3 className="text-lg font-bold mb-2">Claude for Enterprise</h3>
+        <h3 className="text-xl font-semibold mb-6">Our Work</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-stone-100 p-4 shadow rounded-lg">
+            <h4 className="text-md font-semibold">Claude for Enterprise</h4>
+            <p className="text-gray-500 text-sm mt-2">March 2024</p>
           </div>
-          <div>
-            <p className="text-sm text-gray-500 mb-2">Research</p>
-            <h3 className="text-lg font-bold mb-2">Expert-level AI Perspective from AI Feedback</h3>
+          <div className="bg-stone-100 p-4 shadow rounded-lg">
+            <h4 className="text-md font-semibold">
+              Contextualized AI: Personalized from AI Feedback
+            </h4>
+            <p className="text-gray-500 text-sm mt-2">March 2024</p>
           </div>
-          <div>
-            <p className="text-sm text-gray-500 mb-2">Article</p>
-            <h3 className="text-lg font-bold mb-2">Core Values for AI Systems: Where, Why, What, and How</h3>
+          <div className="bg-stone-100 p-4 shadow rounded-lg">
+            <h4 className="text-md font-semibold">
+              Core Views on AI Safety: When, Why, What, and How
+            </h4>
+            <p className="text-gray-500 text-sm mt-2">March 2024</p>
           </div>
         </div>
       </div>
@@ -25,3 +29,4 @@ function WorkSection() {
 }
 
 export default WorkSection;
+
