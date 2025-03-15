@@ -7,12 +7,15 @@ import Navbar from './components/Navbar';
 
 function App() {  
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
+      <main className="flex-grow"> 
       <HeroSection />
       <WorkSection />
       <OfficeSection />
+  </main>
       <Footer />
+      
     </div>
   );
 }
