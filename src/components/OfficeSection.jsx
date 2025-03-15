@@ -1,27 +1,26 @@
 import React from "react";
 
-function OfficeSection() {
+function WorkSection() {
   return (
-    <div id="office" className="py-12 px-6 bg-stone-100">
+    <div id="work" className="py-12 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-4">Work with Anthropic</h2>
-            <p className="text-gray-700 mb-4">
-              Anthropic is an AI safety and research company based in San Francisco, 
-              developing AI systems to keep AI beneficial for humanity. We are looking 
-              for researchers, engineers, and system designers to build reliable AI.
-            </p>
-            <button className="bg-black text-white rounded-full px-4 py-2 text-sm w-fit">
-              View Careers
-            </button>
+        <h3 className="text-xl font-semibold mb-6">Our Work</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-stone-100 p-6 shadow rounded-lg">
+            <p className="text-gray-500 text-sm">Product</p>
+            <h4 className="text-md font-semibold">Claude for Enterprise</h4>
+            <img src="C:\Users\hp220\Downloads\DALL·E 2025-03-15 23.31.48 - A modern office space with large windows, natural light, and a collaborative work environment. The office has an open layout with desks, plants, and e.webp" alt="Office Space" />
+            <p className="text-gray-500 text-sm mt-2">March 2024</p>
           </div>
-          <div>
-            <img
-              src="https://via.placeholder.com/600x400"
-              alt="Anthropic office space with team members working"
-              className="rounded-lg w-full h-full object-cover"
-            />
+          <div className="bg-stone-100 p-6 shadow rounded-lg">
+            <p className="text-gray-500 text-sm">Alignment & Research</p>
+            <h4 className="text-md font-semibold">Contextualized AI: Personalized from AI Feedback</h4>
+            <p className="text-gray-500 text-sm mt-2">March 2024</p>
+          </div>
+          <div className="bg-stone-100 p-6 shadow rounded-lg">
+            <p className="text-gray-500 text-sm">Announcement</p>
+            <h4 className="text-md font-semibold">Core Views on AI Safety: When, Why, What, and How</h4>
+            <p className="text-gray-500 text-sm mt-2">March 2024</p>
           </div>
         </div>
       </div>
@@ -29,5 +28,6 @@ function OfficeSection() {
   );
 }
 
-export default OfficeSection;
+export default WorkSection;
+
 
