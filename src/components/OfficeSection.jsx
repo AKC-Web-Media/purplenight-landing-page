@@ -30,7 +30,7 @@ function OfficeSection() {
           {/* Right Side - Office Image */}
           <div className="overflow-hidden rounded-lg shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1561564859-3f8419b9df85?w=800"
+              src="C:\Users\hp220\Downloads\DALL·E 2025-03-15 23.31.48 - A modern office space with large windows, natural light, and a collaborative work environment. The office has an open layout with desks, plants, and e.webp0"
               alt="Modern office space with a professional environment"
               className="w-full h-full object-cover"
             />
