@@ -4,43 +4,31 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white py-4 px-6">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <h1 className="text-xl font-bold">Claude Clone</h1>
+    <nav className="bg-black text-white py-4 px-6 flex justify-between items-center">
+      {/* A Logo */}
+      <h2 className="text-2xl font-bold">A</h2>
 
-        {/* Hamburger Icon for Mobile */}
-        <button 
-          className="md:hidden text-3xl z-50" 
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? "✖" : "☰"}
-        </button>
+      {/* Hamburger Button */}
+      <button className="text-3xl" onClick={() => setIsOpen(true)}>☰</button>
 
-        {/* Navigation Links (Desktop) */}
-        <ul className="hidden md:flex space-x-6">
-          <li><a href="#hero" className="hover:text-gray-300">Home</a></li>
-          <li><a href="#work" className="hover:text-gray-300">Work</a></li>
-          <li><a href="#office" className="hover:text-gray-300">Office</a></li>
-          <li><a href="#footer" className="hover:text-gray-300">Contact</a></li>
-        </ul>
-      </div>
-
-      {/* Full-Screen Mobile Menu */}
+      {/* Full-Screen Menu */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center z-50">
-          <button 
-            className="absolute top-6 right-6 text-3xl" 
-            onClick={() => setIsOpen(false)}
-          >
-            ✖
-          </button>
-          <ul className="space-y-8 text-2xl">
-            <li><a href="#hero" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Home</a></li>
-            <li><a href="#work" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Work</a></li>
-            <li><a href="#office" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Office</a></li>
-            <li><a href="#footer" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Contact</a></li>
-          </ul>
+        <div className="fixed inset-0 bg-white text-black flex flex-col items-center justify-center z-50">
+          
+          {/* Top Section with "A" Logo & Close Button */}
+          <div className="absolute top-6 left-6 text-2xl font-bold">A</div>
+          <button className="absolute top-6 right-6 text-3xl" onClick={() => setIsOpen(false)}>✖</button>
+
+          {/* Menu Links */}
+          {["Claude API", "Research", "Commitments", "Learn", "News"].map((item, index) => (
+            <a key={index} href={`#${item.toLowerCase()}`} className="text-2xl font-semibold py-4 w-full text-center border-b border-gray-300">
+              {item}
+            </a>
+          ))}
+
+          {/* Buttons */}
+          <button className="bg-black text-white w-3/4 py-3 mt-6 text-lg rounded-full">Try Claude</button>
+          <button className="border border-black w-3/4 py-3 mt-3 text-lg rounded-full">Download App</button>
         </div>
       )}
     </nav>
@@ -48,3 +36,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
