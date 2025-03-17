@@ -11,10 +11,10 @@ function Navbar() {
 
         {/* Hamburger Icon for Mobile */}
         <button 
-          className="md:hidden text-2xl" 
+          className="md:hidden text-3xl z-50" 
           onClick={() => setIsOpen(!isOpen)}
         >
-          ☰
+          {isOpen ? "✖" : "☰"}
         </button>
 
         {/* Navigation Links (Desktop) */}
@@ -26,18 +26,25 @@ function Navbar() {
         </ul>
       </div>
 
-      {/* Mobile Menu (Dropdown) */}
+      {/* Full-Screen Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden bg-black text-white py-4 px-6 space-y-3 text-center">
-          <li><a href="#hero" className="block hover:text-gray-300">Home</a></li>
-          <li><a href="#work" className="block hover:text-gray-300">Work</a></li>
-          <li><a href="#office" className="block hover:text-gray-300">Office</a></li>
-          <li><a href="#footer" className="block hover:text-gray-300">Contact</a></li>
-        </ul>
+        <div className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center z-50">
+          <button 
+            className="absolute top-6 right-6 text-3xl" 
+            onClick={() => setIsOpen(false)}
+          >
+            ✖
+          </button>
+          <ul className="space-y-8 text-2xl">
+            <li><a href="#hero" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Home</a></li>
+            <li><a href="#work" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Work</a></li>
+            <li><a href="#office" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Office</a></li>
+            <li><a href="#footer" className="hover:text-gray-300" onClick={() => setIsOpen(false)}>Contact</a></li>
+          </ul>
+        </div>
       )}
     </nav>
   );
 }
 
 export default Navbar;
-
