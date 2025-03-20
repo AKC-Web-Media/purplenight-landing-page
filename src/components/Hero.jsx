@@ -5,34 +5,6 @@ export default function Hero() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-200 to-slate-100 text-white">
       <div className=" max-w-[1152px] container mx-auto px-4 py-20">
-        <nav className="flex justify-between items-center mb-6">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center gap-2"
-          ></motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="hidden md:flex gap-8"
-          >
-            <a href="#" className="hover:text-purple-300 transition-colors">
-              Products
-            </a>
-            <a href="#" className="hover:text-purple-300 transition-colors">
-              Solutions
-            </a>
-            <a href="#" className="hover:text-purple-300 transition-colors">
-              Resources
-            </a>
-            <a href="#" className="hover:text-purple-300 transition-colors">
-              Pricing
-            </a>
-          </motion.div>
-        </nav>
-
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
