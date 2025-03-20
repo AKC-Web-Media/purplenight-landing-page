@@ -1,52 +1,6 @@
-import React from "react";
-import FullLogo from "./FullLogo";
-
-function Footer({ref}) {
-  return (
-    /*
-    <footer ref={ref} id="footer" className="bg-black text-white py-12 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div>
-          <h4 className="text-lg font-semibold mb-4">Product</h4>
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>Claude 3</li>
-            <li>Claude Code</li>
-            <li>Claude for Enterprise</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold mb-4">Resources</h4>
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>Docs</li>
-            <li>Blog</li>
-            <li>API Reference</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold mb-4">Company</h4>
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>About</li>
-            <li>Careers</li>
-            <li>Newsroom</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold mb-4">Help and security</h4>
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-            <li>Security</li>
-          </ul>
-        </div>
-      </div>
-      <div className="text-gray-500 text-sm text-center mt-8">
-        © 2025 Anthropic. All rights reserved.
-      </div>
-    </footer>
-    */
-      <footer ref={ref} id="footer" className="bg-black text-white py-12 px-6">
-        <div className="flex justify-center items-center scale-200">
-        <svg width="800" height="240" viewBox="0 0 254 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+export default function FullLogo(){
+    return (
+        <svg width="200" height="60" viewBox="0 0 254 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.52945 11.0085C1.52945 4.92868 6.50441 0 12.6413 0H37.4579C43.5948 0 48.5698 4.92868 48.5698 11.0085V35.5942C48.5698 41.6741 43.5948 46.6027 37.4579 46.6027H12.6413C6.50441 46.6027 1.52945 41.6741 1.52945 35.5942V11.0085Z" fill="#7B00FF"/>
 <g filter="url(#filter0_d_0_1)">
 <path d="M38.1986 4.40332H11.9005V41.8323H38.1986V4.40332Z" fill="white"/>
@@ -81,13 +35,5 @@ function Footer({ref}) {
 </svg>
 
 
-        </div>
-      <div className="text-gray-500 text-sm text-center mt-8">
-        © 2025 Purplenight. All rights reserved.
-      </div>
-      </footer>
-  );
+    )
 }
-
-export default Footer;
-
