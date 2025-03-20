@@ -4,12 +4,18 @@ import { ArrowRight, Rocket } from "lucide-react";
 export default function Hero() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-200 to-slate-100 text-white">
-      <div className=" max-w-[1152px] container mx-auto px-4 py-20">
+      <div className="max-w-[1152px] container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+
+          
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
+            }}
           >
             <h1
               style={{ fontFamily: "Poppins" }}
@@ -18,8 +24,7 @@ export default function Hero() {
               Purplenight, the balance of reading and AI
             </h1>
             <p className="text-lg text-gray-800 mb-8">
-              Purplenight has got it the balance between book reading and AI
-              without compromising the knowledge.
+              Purplenight has got it—the balance between book reading and AI without compromising knowledge.
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.button
@@ -27,10 +32,7 @@ export default function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-black text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2"
                 onClick={() =>
-                  window.open(
-                    "https://purplenight.hyperingenious.tech",
-                    "_blank"
-                  )
+                  window.open("https://purplenight.hyperingenious.tech", "_blank")
                 }
               >
                 Try out now
@@ -46,10 +48,15 @@ export default function Hero() {
             </div>
           </motion.div>
 
+
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.8 },
+              visible: { opacity: 1, scale: 1, transition: { duration: 0.7, delay: 0.3, ease: "easeOut" } }
+            }}
             className="relative"
           >
             <img
@@ -57,7 +64,12 @@ export default function Hero() {
               alt="Digital Innovation"
               className="rounded-2xl shadow-2xl"
             />
-            <div className="absolute -bottom-8 -left-8 bg-white/10 backdrop-blur-xl p-6 rounded-xl">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } }}
+              viewport={{ once: true }}
+              className="absolute -bottom-8 -left-8 bg-white/10 backdrop-blur-xl p-6 rounded-xl"
+            >
               <div className="flex items-center gap-4">
                 <div className="bg-gray-300/90 p-3 rounded-lg">
                   <Rocket className="w-6 h-6 text-black" />
@@ -69,8 +81,9 @@ export default function Hero() {
                   <p className="text-sm text-black">People enjoy reading it.</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
+
         </div>
       </div>
     </div>
