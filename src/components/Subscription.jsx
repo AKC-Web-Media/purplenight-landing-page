@@ -113,7 +113,7 @@ const plans = [
     subscription_type: "avid_reader",
     price: (
       <Mark color="black" c={"white"}>
-        &nbsp;&nbsp; ₹499/month &nbsp; &nbsp;
+        &nbsp;&nbsp; ₹49/month &nbsp; &nbsp;
       </Mark>
     ),
     icon: <CrownCross size={36} color="#edbd0c" weight="fill" />,
